@@ -1,0 +1,8 @@
+:host {
+    background-color: var(--bg-color-tertiary);
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color-secondary);
+    align-items: center;
+    box-shadow: var(--box-shadow-primary);
+}

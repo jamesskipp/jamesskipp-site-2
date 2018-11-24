@@ -1,0 +1,28 @@
+<div class="row header-hero">
+</div>
+<nav class="row padding-sides-15 padding-5">
+    <div class="col-left col-v-center">
+        <a routerLink="/">James Skipp</a>
+    </div>
+    <div class="col-right col-v-center">
+        <ul class="horrizontal-list hidden-xs-down">
+            <li><a routerLink="/skills">{{ '{ skills }' }}</a></li>
+            <li><a routerLink="/history">{{ '{ history }' }}</a></li>
+            <li><a routerLink="/projects">{{ '{ projects }' }}</a></li>
+            <li><a routerLink="/contact">{{ '{ contact }' }}</a></li>
+        </ul>
+        <div class="animated-hamburger hidden-sm-up" (click)="toggleMobileMenu()" [ngClass]="{ 'active' : showMobileMenu }">
+            <div class="hamburger-top"></div>
+            <div class="hamburger-patty"></div>
+            <div class="hamburger-bottom"></div>
+        </div>
+    </div>
+</nav>
+<div class="mobile-menu col col-center" [ngClass]="{ 'visible' : showMobileMenu }">
+    <ul class="vertical-list padding-5 hidden-sm-up">
+        <li><a routerLink="/skills" (click)="toggleMobileMenu()">Skills</a></li>
+        <li><a routerLink="/history" (click)="toggleMobileMenu()">History</a></li>
+        <li><a routerLink="/projects" (click)="toggleMobileMenu()">Projects</a></li>
+        <li><a routerLink="/contact" (click)="toggleMobileMenu()">Contact</a></li>
+    </ul>
+</div>

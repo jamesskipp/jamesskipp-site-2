@@ -1,0 +1,36 @@
+:host {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.img-container {
+    overflow: hidden;
+    padding: 10px;
+    background-color: var(--bg-color-tertiary);
+}
+
+.img-container > small {
+    color: var(--text-color-tertiary);
+    display: block;
+    text-align: center;
+    font-size: .7rem;
+    margin-top: 5px;
+}
+
+.img-container img,
+.word-box {
+    width: 400px;
+}
+
+.img-container img,
+.img-container {
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .img-container img,
+    .word-box {
+        width: 280px;
+    }
+}

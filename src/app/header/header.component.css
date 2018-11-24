@@ -1,0 +1,77 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color-dark);
+    box-shadow : var(--box-shadow-primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav {
+    height: 46px;
+}
+
+.header-hero {
+    height: 55px;
+    overflow: hidden;
+    background-image: url('src/assets/img/rockface.png');
+}
+
+.header-hero img {
+    object-fit: cover;
+}
+
+.animated-hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.animated-hamburger > * {
+    background-color: white;
+    width: 26px;
+    height: 4px;
+    margin: 3px;
+    border-radius: 4px;
+    transition: 250ms transform ease, 
+                250ms width ease;
+}
+
+.animated-hamburger.active *:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.animated-hamburger.active *:nth-child(2) {
+    width: 0px;
+}
+
+.animated-hamburger.active *:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: 250ms max-height ease;
+}
+
+.mobile-menu.visible {
+    max-height: 132px;
+}
+
+a {
+    font-size: 20px;
+}
+
+ul.vertical-list,
+ul.vertical-list a {
+    width: 100%;
+}
+
+ul.vertical-list li {
+    text-align: center;
+}
